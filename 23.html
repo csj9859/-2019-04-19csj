@@ -1,0 +1,290 @@
+<!DOCTYPE html><html><head><title>2019/4/23</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#2019423">2019/4/23</a><ul>
+<li><a href="#自身属性">自身属性</a><ul>
+<li><a href="#修改this">修改THIS</a></li>
+<li><a href="#json方法">JSON方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#我不会">我不会</a><ul>
+<li><ul>
+<li><a href="#赋值赋址">赋值赋址</a></li>
+<li><a href="#继承">继承</a></li>
+<li><a href="#类式继承">类式继承</a></li>
+<li><a href="#原型继承">原型继承</a></li>
+<li><a href="#寄生式组合继承">寄生式组合继承</a></li>
+<li><a href="#对象继承">对象继承</a></li>
+<li><a href="#方法继承">方法继承</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h1 id="2019423">2019/4/23</h1>
+
+<ul><li><p>setInterval(function,1000,函数的参数)</p></li>
+</ul>
+
+<p>undefined出现的情况 <br>
+        1.对象没有属性的时候 <br>
+        2.函数没有返回值 <br>
+        3.形参没有实参 <br>
+        4.变量没有赋值 <br>
+        5.简单类型的自定义属性</p>
+
+<p>**只有在引用类型下才能添加属性或者方法 </p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs openscad"><div class="hljs-line">    <span class="hljs-built_in">let</span> <span class="hljs-built_in">str</span> = '';
+</div><div class="hljs-line">    <span class="hljs-built_in">str</span>.num = <span class="hljs-number">0</span>;
+</div><div class="hljs-line">    <span class="hljs-built_in">str</span>.num++;
+</div><div class="hljs-line">    console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">str</span>.num);
+</div><div class="hljs-line">    undefined
+</div><div class="hljs-line">    这种是不能添加属性或方法
+</div></code></pre>
+
+<p>包装对象: <br>
+            当简单类型去使用某个属性或者方法的时候， <br>
+            内部会偷偷地转成对象(new 内置类)把属性 <br>
+            或者方法提供使用者，然后再悄悄地销毁 <br>
+            这个过程就叫包装对象。</p>
+
+<blockquote>
+  <p>let str = ‘1234567’; <br>
+    let str2 = new String(‘1234567’);</p>
+</blockquote>
+
+
+
+<h2 id="自身属性">自身属性</h2>
+
+<p>for in不但会枚举本对象，还会枚举原型，此时就会多出来一些莫名其妙的东西 <br>
+但是我们不想要那么不是对象上的东西.</p>
+
+<p>obj.hasOwnProperty(‘属性名’) <br>
+            查看某个属性是不是对象自身的</p>
+
+<p>返回值: <br>
+            布尔值，是就为true，不是就为false</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line"><span class="hljs-built_in">Object</span>.prototype.say = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'咩'</span>);
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-keyword">let</span> obj = {
+</div><div class="hljs-line">        <span class="hljs-attr">name</span>:<span class="hljs-string">'小马'</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">age</span>:<span class="hljs-number">16</span>,
+</div><div class="hljs-line">        <span class="hljs-attr">job</span>:<span class="hljs-string">'前端'</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> attr <span class="hljs-keyword">in</span> obj){
+</div><div class="hljs-line">        <span class="hljs-keyword">if</span>(obj.hasOwnProperty(attr)){
+</div><div class="hljs-line">            <span class="hljs-built_in">console</span>.log(attr);<span class="hljs-comment">//obj[attr]</span>
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.dir(obj);
+</div></code></pre>
+
+
+
+<h3 id="修改this">修改THIS</h3>
+
+<p>一个函数，天生就自带一些属性和方法 <br>
+其中有： <br>
+            apply() <br>
+            call() <br>
+            bind() <br>
+        他们都能改变this指向</p>
+
+<blockquote>
+  <ul><li><p>call: <br>
+     有无数个参数 <br>
+     第一个参数: <br>
+         改变this指向（写啥是啥） <br>
+             null和undefined为window <br>
+     第二个参数之后: <br>
+         就是实参</p></li>
+  <li><p>apply: <br>
+   有2个参数 <br>
+   第一个参数: <br>
+       改变this指向（写啥是啥） <br>
+           null和undefined为window <br>
+   第二个参数: <br>
+       数组[1,2,3] <br>
+       数组中放参数</p></li>
+  <li><p>bind: <br>
+          有无数个参数 <br>
+          第一个参数: <br>
+              改变this指向（写啥是啥） <br>
+                  null和undefined为window <br>
+          第二个参数之后: <br>
+              就是实参 <br>
+  使用bind不能立马执行函数，会返回一个新函数，这个函数 <br>
+      的this是改变了的，得执行这个新函数才能输出代码。</p></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="json方法">JSON方法</h3>
+
+
+
+<h1 id="我不会">我不会</h1>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs livescript"><div class="hljs-line">        JSON
+</div><div class="hljs-line">            <span class="hljs-string">'{</span>
+</div><div class="hljs-line"><span class="hljs-string">                name:'</span>小明<span class="hljs-string">',</span>
+</div><div class="hljs-line"><span class="hljs-string">                age:18</span>
+</div><div class="hljs-line"><span class="hljs-string">            }'</span>
+</div><div class="hljs-line">            <span class="hljs-string">'[]'</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        对象:
+</div><div class="hljs-line">            {
+</div><div class="hljs-line">                name:<span class="hljs-string">'小明'</span>,
+</div><div class="hljs-line">                age:<span class="hljs-number">18</span>
+</div><div class="hljs-line">            }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        xml:
+</div><div class="hljs-line">            &lt;person&gt;
+</div><div class="hljs-line">                &lt;name&gt;小明&lt;/name&gt;
+</div><div class="hljs-line">                &lt;age&gt;<span class="hljs-number">18</span>&lt;/age&gt;
+</div><div class="hljs-line">            &lt;/person&gt;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        JSON<span class="hljs-function"> -&gt;</span> [] | {}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            JSON.parse() 
+</div><div class="hljs-line">                能够把json转成对象或者数组
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">                json必须是一个标准格式的json,不然转不出来
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">                json中不能放函数、不能为<span class="hljs-literal">undefined</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">                <span class="hljs-string">'{"name":12,"nn":"ds"}'</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            JSON.stringify()
+</div><div class="hljs-line">                把对象或者数组转成json
+</div><div class="hljs-line">                对象中不能放函数、不能为<span class="hljs-literal">undefined</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            低版本可以使用json2.js
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            eval 能够把字符串尽量转成js能执行的代码。
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">            <span class="hljs-keyword">new</span> Function(<span class="hljs-string">''</span>,<span class="hljs-string">'console.log()'</span>)
+</div></code></pre>
+
+<p>、</p>
+
+
+
+<h3 id="赋值赋址">赋值赋址</h3>
+
+<p>因为赋值的时候第一层为简单类型，简单类型的 <br>
+        赋值就是赋值，如果第一层有引用类型， <br>
+        那么引用类型的赋值为赋址。</p>
+
+<p>如果是引用类型，就把引用类型中的值取出来 <br>
+        如果值还是为引用类型，那么继续循环取值 <br>
+        直到全部都为简单类型为止</p>
+
+<p><strong>deepclone -&gt; 深度克隆（深拷贝）</strong></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs javascript"><div class="hljs-line">    <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, { <span class="hljs-attr">ary</span>: [{ <span class="hljs-attr">name</span>: <span class="hljs-string">'小强'</span> }] }]];
+</div><div class="hljs-line">    <span class="hljs-built_in">Object</span>.prototype.xxoo = <span class="hljs-string">'哈哈'</span>;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deepClone</span>(<span class="hljs-params">obj</span>) </span>{
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> o = obj.push ? [] : {};
+</div><div class="hljs-line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> attr <span class="hljs-keyword">in</span> obj) {
+</div><div class="hljs-line">            <span class="hljs-keyword">if</span> (obj.hasOwnProperty(attr)) {
+</div><div class="hljs-line">                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> obj[attr] === <span class="hljs-string">'object'</span>) {
+</div><div class="hljs-line">                    o[attr] = deepClone(obj[attr])
+</div><div class="hljs-line">                } <span class="hljs-keyword">else</span> {
+</div><div class="hljs-line">                    o[attr] = obj[attr];
+</div><div class="hljs-line">                }
+</div><div class="hljs-line">            }
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> o;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    <span class="hljs-keyword">let</span> arr2 = deepClone(arr);
+</div><div class="hljs-line">    arr2[<span class="hljs-number">4</span>][<span class="hljs-number">1</span>].ary[<span class="hljs-number">0</span>].name = <span class="hljs-string">'小弓'</span>;
+</div><div class="hljs-line">    arr2[<span class="hljs-number">4</span>].push(<span class="hljs-number">6</span>);
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(arr2)
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(arr)
+</div></code></pre>
+
+<blockquote>
+  <p>思路： <br>
+  //先声明一个数组，去存克隆出来的内容 <br>
+          //判断obj是否为数组，是数组就o就为[],否则为{} <br>
+           // for(let i=0;i&lt;arr.length;i++){ <br>
+              //判断对象中的某个值是否为引用类型 <br>
+              //如果是，就继续调用deepClone把引用值传到函数中 <br>
+               //如果是简单类型就直接赋值</p>
+</blockquote>
+
+<h3 id="继承">继承</h3>
+
+<p>子类继承了父类的一些特征，还有自己的一套自己的特征。</p>
+
+<ul><li><p>为什么继承：？ <br>
+为了代码能够更好的复用，组合起来生成一个新的类别</p></li>
+</ul>
+
+<h3 id="类式继承">类式继承</h3>
+
+<blockquote>
+  <p>能够把父类看作一个函数，调用父类并且通过call去改变this指向<strong>.call(zhis)</strong>，把指向改为子类。</p>
+</blockquote>
+
+<h3 id="原型继承">原型继承</h3>
+
+<blockquote>
+  
+</blockquote>
+
+<h3 id="寄生式组合继承">寄生式组合继承</h3>
+
+<blockquote>
+  
+</blockquote>
+
+<h3 id="对象继承">对象继承</h3>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h3 id="方法继承">方法继承</h3>
+
+<ul><li><p>扩展式继承</p>
+
+<blockquote>
+  <p>子类原型 = {…父类原型} <br>
+  不能进行深度拷贝</p>
+</blockquote></li>
+<li><p>deep clone  深度克隆(深拷贝)</p></li>
+</ul>
+
+<p>for  in deep clone（父类原型）</p></div></body></html>
