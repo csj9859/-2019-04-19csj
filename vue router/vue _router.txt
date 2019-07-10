@@ -1,0 +1,55 @@
+哪个页面有需要跳转   有link标签  就需要写<router-view/>
+
+
+{
+      path: '/about',   注意要是要是某个界面下面的可以不写/  要么写全路径
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+
+
+
+思路： 有一个主界面 App。vue 用来显示和跳转界面 2用main接受router下面的东西 返给App
+
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')
+
+3 router.js   引下面的散文件的路径
+
+import Router from 'vue-router'
+import Home from './views/Home.vue'
+
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: []})
+
+4 散文件   什么.vue
+
+<template>
+  <div class="home">
+    home
+  </div>
+</template>
+
+<script>
+
+
+// export default {
+//   name: 'home',
+  
+// }
+// </script>
