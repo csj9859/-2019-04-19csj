@@ -1,120 +1,122 @@
-git �汾���ƹ���
+git 版本控制工具
 
-github ����Ա������վ���洢���롢˽�е������ռ�
+github 程序员交友网站、存储代码、私有的域名空间
 
 
-SVN:����ʽ�汾����
+SVN:集中式版本控制
 
-��Ҫ�����ģ�һ�������ж��ǲ��ܽ��а汾���Ƶ�
+需要连网的，一旦网络中断是不能进行版本控制的
 
-�������ǹ�˾���ݲ��ܷ��ʵ�
+基本上是公司内容才能访问的
 
-�ǳ������������������һ������������������Դ��ϴ�װס�
+非常依赖于中央服务器，一旦服务器挂了所有资源都洗白白。
 
 
 GIT:
-�ֲ�ʽ����
+分布式管理
 
-git�����������ƾ����ڲ���Ҫ������ܽ��а汾����
-
-
-github����һ�����͵���������������Һܽ�׳�����Խ��д����Զ�ֿ̲����������һ����ѵ���������ʹ�þ�̬��ҳ��
+git本身最大的优势就在于不需要网络就能进行版本控制
 
 
-1.����github�˺�
-
-2.ÿ̨�����������Կ
-
-��ȡ��Կ��
-ssh-keygen -t rsa -C "ע������"
-
-��github->settings->SSH and GPG keys ���а�
-
-ssh -T git@github.com ��Hi....��˵���󶨳ɹ�
-
-���ù�������Ϣ:
-	git config --global user.name "����"
-
-	git config --global user.email "�Լ�����"
-
-	git config --list �鿴����
+github算是一个大型的中央服务器，并且很健壮，可以进行代码的远程仓库管理，给你一个免费的域名可以使用静态的页面
 
 
-��δ�����Ŀ(�汾)
+1.申请github账号
 
-1��git init(������������)
-
-2����github�ϴ�����Ŀ���ǵù�ѡ README��
+2.每台计算机中有秘钥
 
 
-cd ·�����ܽ���Ŀ¼
+获取秘钥：
+ssh-keygen -t rsa -C "注册邮箱"
 
-cd ..�����ϲ�Ŀ¼
+上github->settings->SSH and GPG keys 进行绑定
 
-��¡��Ŀ:
-	git clone ��ַ
+ssh -T git@github.com 有Hi....就说明绑定成功
+
+设置贡献者信息:
+	git config --global user.name "名字"
+
+	git config --global user.email "自己邮箱"
+
+	git config --list 查看配置
 
 
-ls  || ll �鿴�¼�Ŀ¼����Щ
+如何创建项目(版本)
 
-�鿴״̬:git status
+1、git init(无网络的情况下)
 
-���������ݴ���
-	git  add �ļ���
+2、在github上创建项目（记得勾选 README）
 
-	����:  git add .
 
-�ݴ������汾��
-	git commit -m "ע��"
+cd 路径就能进入目录
 
-���ٴӹ��������汾����Ҫ����һ�鹤�������ݴ����ٵ��汾����
-	git commit -a -m "ע��"
+cd ..回退上层目录
 
-�鿴�汾:
+克隆项目:
+	git clone 地址
+
+
+ls  || ll 查看下级目录有哪些
+
+查看状态:git status
+
+工作区到暂存区
+	git  add 文件名
+
+	批量:  git add .
+
+暂存区到版本区
+	git commit -m "注释"
+
+快速从工作区到版本区（要先走一遍工作区到暂存区再到版本区）
+	git commit -a -m "注释"
+
+查看版本:
 	git log
-	git reflog  �����ļ�¼
+	git reflog  操作的记录
 
-����:
-	git reset --hard �汾��
+撤销:
+	git reset --hard 版本号
 
-�˳� ��	q
+退出 ：	q
 
-���¼�ȥ���ղ����������
+上下键去翻刚才输入的命令
 
-�ϴ�:
+上传:
 	git push origin master  
 
 
-�鿴ÿ������֮��Ĳ���:
+查看每个区域之间的差异:
 
-	���������ݴ���
+	工作区查暂存区
 		git diff
 
-	�ݴ�����汾��
+	暂存区查版本区
 		git diff --cached
 
-	��������汾��
+	工作区查版本区
 		git diff master
 
 
-���μ�:
-	���ҵ�github����������Ŀ��Ȼ��fork����ͨ��git clone ��ַ(��һ��)
+看课件:
+	先找到github的人名和项目，然后fork，再通过git clone 地址(第一次)
 
-	Ҫfork����Ŀÿ�춼��䣬������Ŀ�䣬���fork����ĿҲ�ñ䣬������
+	要fork的项目每天都会变，他的项目变，你的fork的项目也得变，这样才
 	
-	�ܴﵽ��Ŀ���¡�
+	能达到项目更新。
 
 	
-	ÿ���ȥ���¿μ���
-		1.�Ȱ�fork������Ŀɾ��
-				���뵽��Ŀ�е��settings������������
-				���Delete this repository��ť
+	每天回去更新课件：
+		1.先把fork过的项目删除
+				进入到项目中点击settings，拉到最下面
+				点击Delete this repository按钮
 
-		2.����fork��Ŀ
+		2.重新fork项目
 
 
-		3.�ܵ�֮ǰ��¡������Ŀ�У���Git,����git pull�㶨��
-    
+		3.跑到之前克隆过的项目中，打开Git,输入git pull搞定。
+    永久免密码上传 
+    git config --global credential.helper store
 
 
 	
