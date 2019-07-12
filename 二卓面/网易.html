@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wangyi</title>
+    <script>
+        var desW = 640; //设计图
+        function refreshRem() {
+            let doc = document.documentElement; //html
+            // alert(doc.nodeName);
+            let winW = doc.clientWidth;
+            //设计图 / 可视区
+            let radio = desW / winW;  //开发模拟器也要640的位置上
+
+            // if (winW >= desW) {
+            //     //100px为了好计算  100px -> 1rem  55px -> 0.55rem
+            //     doc.style.fontSize = '100px';
+            //     return;
+            // }
+            doc.style.fontSize = 100 / radio + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+    <link rel="stylesheet" href="./less/wy.css">
+</head>
+
+<body>
+    <header id="box">
+        <div id="box1">
+            <div id="box2"><img src="./img/jt.png" alt=""></div>
+            <h1><img src="./img/logo.png" alt=""></h1>
+            <h3>新闻频道</h3>
+        </div>
+
+    </header>
+    <nav>
+        <div id="a1">
+            <div id="a2">首页</div>
+            <div id="a2">国内</div>
+            <div id="a2">国际</div>
+            <div id="a2">历史</div>
+        </div>
+        <div id="a3">
+            <img src="./img/banner.jpg" alt="">
+            <div id="a4">利巴嫩积雪厚数米，已灭国</div>
+        </div>
+        <div id="a5">
+            <h3>以“侨”架“桥” 习近平这样谈侨务工作</h3>
+            <p>央视网</p>
+            <p>一小时前</p>
+            <p>66万跟帖</p>
+        </div>
+        <div id="a5">
+            <h3>习近平同尼日尔总统伊素福举行会谈</h3>
+            <p>新华社</p>
+            <p>1.5小时前</p>
+            <p>6万跟帖</p>
+        </div>
+        <div id="a5">
+            <img src="./img/3g.163.png" alt="">
+            <h3>内蒙古西乌旗致22死矿企事故：原副旗长高校波被捕</h3>
+            <p>1.5小时前</p>
+            <p>6万跟帖</p>
+        </div>
+    </nav>
+</body>
+
+</html>

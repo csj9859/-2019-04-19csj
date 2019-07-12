@@ -1,0 +1,30 @@
+/**- public -**/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#xfk {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  der-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #f01c1c;
+  z-index: 999;
+  font-size: 13px;
+  overflow: visible;
+}
+#xfk #xfk_o {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 6px 12px;
+}
+#xfk #xfk_o div svg {
+  opacity: .45;
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,244 @@
+/**- public -**/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+#div_l {
+  width: 260px;
+  height: 760px;
+  background: #5069c4;
+  float: left;
+  display: block;
+}
+#div_l #a1 {
+  height: 60px;
+  padding: 12px;
+}
+#div_l #div_tl {
+  height: 25px;
+  line-height: 25px;
+  float: left;
+  display: block;
+}
+#div_l #div_tl span {
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 3px;
+  margin-left: 10px;
+  float: left;
+  display: block;
+}
+#div_l #div_tl img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  float: left;
+  display: block;
+}
+#div_l #div_tr {
+  float: right;
+  display: block;
+  margin-top: 7px;
+}
+#div_l #a2 .icon-today-list {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  opacity: .5;
+  fill: #fff;
+  overflow: hidden;
+  float: left;
+  display: block;
+  display: inline-block;
+  box-sizing: border-box;
+  color: #fff;
+}
+#div_l #a2 .icon-calendar-list {
+  opacity: .5;
+  margin-right: 8px;
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  color: #fff;
+  float: left;
+  display: block;
+}
+#div_l #a2 .icon-inbox-list {
+  opacity: .5;
+  margin-right: 8px;
+  margin-left: 0px;
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  color: #fff;
+  float: left;
+  display: block;
+}
+#div_l #a2 li {
+  line-height: 26px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+#div_l #a2 span {
+  color: #fff;
+}
+#div_l #a2 #s1 {
+  float: right;
+  display: block;
+}
+#div_l #a3 #div_zz #div_qd a {
+  color: #fff;
+  font: inherit;
+}
+#div_l #a3 #div_zz #div_qd .icon-add-list {
+  opacity: .5;
+  margin-right: 80px;
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#div_l #a3 #div_zs {
+  height: 25px;
+  margin-left: 5px;
+  margin-top: 12px;
+  border-bottom: 1px solid #333;
+}
+#div_l #a3 #div_zs span {
+  width: 50px;
+  height: 12px;
+  float: left;
+  display: block;
+  text-align: center;
+}
+#div_l #a3 #div_zs #active {
+  color: #fff;
+}
+#div_l #a3 #div_zs #active::after {
+  content: "";
+  border-bottom: 1px solid #fff;
+  width: 15px;
+  margin-top: 4.9px;
+  margin-left: 13.5px;
+  display: block;
+}
+#div_l #div_g {
+  height: 0.5px;
+  background: #158dbd;
+  margin: 8px 0px;
+}
+#div_l #tu {
+  width: 11px;
+  height: 11px;
+  background: red;
+  display: inline-block;
+}
+#div_l #s2 {
+  float: right;
+  display: block;
+}
+#div_l #ul {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+#div_l #ul li {
+  line-height: 23px;
+}
+#div_l #ul span {
+  color: #fff;
+}
+#div_l #a5 {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+#div_l #a5 #div_zx {
+  width: 11px;
+  height: 11px;
+  background: red;
+  display: inline-block;
+}
+#div_l #a5 #zy {
+  color: #fff;
+}
+#div_l #a6 {
+  height: 60px;
+  width: 260px;
+  position: absolute;
+  bottom: 0;
+  line-height: 60px;
+  text-align: center;
+}
+#div_l #a6 .icon-upgrade-button-bg {
+  width: 80px;
+  height: 60px;
+  fill: rgba(255, 255, 255, 0.1);
+  float: left;
+  display: block;
+}
+#div_m {
+  float: left;
+  display: block;
+}
+#div_m header {
+  padding: 10px 12px;
+  height: 20px;
+}
+#div_m header #line_left {
+  float: left;
+  display: block;
+}
+#div_m header #line_right {
+  float: right;
+  display: block;
+}
+#div_m #add_task #txt {
+  width: 250px;
+  height: 25px;
+}
+#div_m #div_z1 {
+  border-style: solid dashed dashed dashed;
+  border-color: #ccc transparent transparent transparent;
+  border-width: 5px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+  display: block;
+  margin: 2.5px 2px;
+}
+#div_m .class_z1 {
+  display: none;
+  border-style: dashed dashed dashed solid;
+  border-color: transparent transparent transparent #ccc;
+  border-width: 5px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+  display: block;
+}
+#div_m h5 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+#div_m ul #div_g {
+  background: #646363;
+  height: 0.5px;
+  margin-left: 25px;
+}

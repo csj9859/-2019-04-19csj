@@ -1,0 +1,769 @@
+/**- public -**/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+#div_l {
+  overflow: hidden;
+  width: 260px;
+  background: #667fdd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  float: left;
+  display: block;
+}
+#div_l #div_left_top {
+  overflow: hidden;
+  width: 231px;
+  height: 30px;
+  padding: 22px 14px;
+  float: left;
+  display: block;
+}
+#div_l #div_left_top #xx:hover #hidden_l_yonghu {
+  display: block;
+}
+#div_l #div_left_top #xx {
+  height: 28px;
+  width: 116px;
+  float: left;
+  display: block;
+}
+#div_l #div_left_top #xx #hidden_l_yonghu {
+  z-index: 9;
+  position: relative;
+  width: 150px;
+  height: 390px;
+  background: #fff;
+  position: absolute;
+  left: 15px;
+  top: 54px;
+  der-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 5px 0px;
+  display: none;
+  line-height: 36px;
+  font-size: 13px;
+}
+#div_l #div_left_top #xx #hidden_l_yonghu li:hover {
+  background-color: rgba(54, 90, 173, 0.08);
+}
+#div_l #div_left_top #xx #hidden_l_yonghu li {
+  font-size: 13px;
+}
+#div_l #div_left_top #xx #hidden_l_yonghu a {
+  padding: 0px 24px 0px 16px;
+  color: rgba(0, 0, 0, 0.85);
+}
+#div_l #div_left_top #xx #hidden_l_yonghu .gang {
+  background-color: rgba(153, 153, 153, 0.12);
+  height: 1px;
+  margin: 1px 0px;
+}
+#div_l #div_left_top #xx #hidden_l_yonghu #yingyong {
+  padding: 0px 24px 0px 16px;
+}
+#div_l #div_left_top #xx #hidden_l_yonghu #yingyong span {
+  font-size: 11px;
+  color: rgba(28, 28, 28, 0.54);
+}
+#div_l #div_left_top #xx #hidden_l_yonghu .li_ycz a {
+  font-size: 11px;
+  color: rgba(28, 28, 28, 0.54);
+}
+#div_l #div_left_top #xx img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  float: left;
+  display: block;
+}
+#div_l #div_left_top #xx span {
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  margin-left: 8px;
+  font-size: 13px;
+  float: left;
+  display: block;
+  margin-top: 6px;
+}
+#div_l #div_left_top #yc {
+  margin-left: 10px;
+  margin-top: 2px;
+  width: 24px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.85);
+  float: right;
+  display: block;
+  overflow: hidden;
+}
+#div_l #div_left_top #yc .i-1 {
+  fill: #fff;
+  opacity: 0.36;
+  filter: alpha(opacity=36);
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#div_l #div_left_top .t-search {
+  float: right;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 0;
+}
+#div_l #div_left_top .t-search .i-1 {
+  font-size: 0;
+  box-sizing: border-box;
+  fill: #fff;
+  opacity: 0.36;
+  filter: alpha(opacity=36);
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#div_l #div_left_list {
+  width: 260px;
+  height: 648px;
+  overflow: hidden;
+}
+#div_l #div_left_list li:hover {
+  background-color: rgba(29, 9, 61, 0.12);
+  border-radius: 4px;
+  font-weight: 600;
+}
+#div_l #div_left_list #tads_1 ul {
+  padding: 0px 10px;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 {
+  height: 36px;
+  padding: 0px 12px;
+  overflow: hidden;
+  position: relative;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a {
+  overflow: hidden;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  height: 36px;
+  width: 236px;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a .icon-today-list {
+  fill: rgba(255, 255, 255, 0.85);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  float: left;
+  display: block;
+  margin-top: 5.5px;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a #div_yc {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a #div_yc span {
+  width: 24px;
+  height: 24px;
+  color: #7086da;
+  display: block;
+  font-size: 12px;
+  position: relative;
+  transform: scale(0.8);
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a span {
+  width: 150px;
+  height: 36px;
+  font-size: 14px;
+  display: inline-block;
+}
+#div_l #div_left_list #tads_1 ul #project_box1 a #span_yf {
+  width: 24px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  float: right;
+  display: block;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 {
+  height: 36px;
+  padding: 0px 12px;
+  overflow: hidden;
+  position: relative;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a {
+  overflow: hidden;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  height: 36px;
+  width: 236px;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a .icon-today-list {
+  fill: rgba(255, 255, 255, 0.85);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  float: left;
+  display: block;
+  margin-top: 5.5px;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a #div_yc {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a #div_yc span {
+  width: 24px;
+  height: 24px;
+  color: #7086da;
+  display: block;
+  font-size: 12px;
+  position: relative;
+  transform: scale(0.8);
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a span {
+  width: 150px;
+  height: 36px;
+  font-size: 14px;
+  display: inline-block;
+}
+#div_l #div_left_list #tads_1 ul #project_box2 a #span_yf {
+  width: 24px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  float: right;
+  display: block;
+}
+#div_l #div_left_list #tads_1 ul #project_box3 {
+  height: 36px;
+  padding: 0px 12px;
+  overflow: hidden;
+}
+#div_l #div_left_list #tads_1 ul #project_box3 a {
+  overflow: hidden;
+  position: relative;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  height: 36px;
+  width: 236px;
+}
+#div_l #div_left_list #tads_1 ul #project_box3 a .icon-calendar-list {
+  fill: rgba(255, 255, 255, 0.85);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  float: left;
+  display: block;
+  margin-top: 5.5px;
+}
+#div_l #div_left_list #tads_1 ul #project_box3 a span {
+  width: 150px;
+  height: 36px;
+  font-size: 14px;
+  display: inline-block;
+}
+#div_l #div_left_list #tads_1 ul #project_box3 a #span_yf {
+  width: 24px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  float: right;
+  display: block;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 {
+  height: 36px;
+  padding: 0px 12px;
+  overflow: hidden;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a {
+  overflow: hidden;
+  position: relative;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  height: 36px;
+  width: 236px;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a .icon-inbox-list {
+  fill: rgba(255, 255, 255, 0.85);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  float: left;
+  display: block;
+  margin-top: 5.5px;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a #div_yc {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  text-align: center;
+  line-height: 24px;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a #div_yc span {
+  width: 24px;
+  height: 24px;
+  color: #7086da;
+  display: block;
+  font-size: 12px;
+  position: relative;
+  transform: scale(0.8);
+  font-weight: 700;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a span {
+  width: 150px;
+  height: 36px;
+  font-size: 14px;
+  display: inline-block;
+}
+#div_l #div_left_list #tads_1 ul #project_box4 a #span_yf {
+  width: 24px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  float: right;
+  display: block;
+}
+#div_l #div_left_list #tabs_2 a:hover {
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.54);
+  border-bottom-color: rgba(255, 255, 255, 0.54);
+}
+#div_l #div_left_list #tabs_2 #l_l {
+  padding: 0px 20px;
+  overflow: visible;
+  height: 36px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  line-height: 36px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+#div_l #div_left_list #tabs_2 #l_l a {
+  color: rgba(255, 255, 255, 0.85);
+  width: 73px;
+  line-height: 36px;
+  height: 36px;
+  flex: 1;
+  float: left;
+  display: block;
+  text-align: center;
+}
+#div_l #div_left_list #tabs_2 #l_z {
+  padding: 0 8px;
+  font-size: 14px;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li:hover {
+  background: blue;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li:hover #span_shu {
+  display: none;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li:hover #yf_ddd {
+  display: block;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li {
+  line-height: 36px;
+  overflow: hidden;
+  height: 36px;
+  padding: 0px 12px;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a {
+  color: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #span1 {
+  float: left;
+  display: block;
+  font-size: 0;
+  display: inline-block;
+  margin-right: 8px;
+  width: 24px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #span1 .icon-normal-list {
+  fill: rgba(255, 255, 255, 0.54);
+  display: inline;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #span2 {
+  line-height: 36px;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #yf_ddd {
+  float: right;
+  display: block;
+  line-height: 18px;
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #yf_ddd .icon-more-for-folder {
+  width: 24px;
+  height: 24px;
+  fill: rgba(255, 255, 255, 0.54);
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #l_z_dian {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  float: right;
+  display: block;
+  margin-top: 13px;
+  margin-right: 8px;
+  background-color: #eefe6f;
+}
+#div_l #div_left_list #tabs_2 #l_z ul li a #span_shu {
+  float: right;
+  display: block;
+  line-height: 36px;
+  font-weight: 350;
+  font-size: 13px;
+}
+#div_l #div_left_list #tabs_2 #l_z #div_l_x {
+  height: 36px;
+  overflow: hidden;
+  padding: 0px 12px;
+}
+#div_l #div_left_list #tabs_2 #l_z #div_l_x a {
+  color: rgba(255, 255, 255, 0.85);
+}
+#div_l #div_left_list #tabs_2 #l_z #div_l_x a .icon-add-list {
+  fill: rgba(255, 255, 255, 0.54);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+#div_l #div_left_list .gang {
+  background-color: rgba(255, 255, 255, 0.12);
+  height: 1px;
+  margin: 10px 0px;
+}
+#div_l #div_left_list #div_dao2 {
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+}
+#div_l #div_left_list #div_dao2 ul li {
+  line-height: 36px;
+}
+#div_l #div_left_list #div_dao2 ul li a {
+  color: rgba(255, 255, 255, 0.85);
+}
+#div_l #div_left_list #div_dao2 ul li a .icon-completed-list {
+  fill: rgba(255, 255, 255, 0.54);
+  display: inline;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#div_l #div_left_list #div_dao2 ul li a .icon-delete-list {
+  fill: rgba(255, 255, 255, 0.54);
+  display: inline;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#div_l #div_left_list #div_dao1 {
+  overflow: hidden;
+  padding: 0 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+#div_l #div_left_list #div_dao1 ul li {
+  line-height: 36px;
+}
+#div_l #div_left_list #div_dao1 ul li a {
+  color: rgba(255, 255, 255, 0.85);
+}
+#div_l #div_left_list #div_dao1 ul li a .icon-summary-list {
+  fill: rgba(255, 255, 255, 0.54);
+  display: inline;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#div_l #div_left_bottom {
+  position: absolute;
+  bottom: 0;
+  background: rgba(29, 9, 61, 0.12);
+  width: 260px;
+}
+#div_l #div_left_bottom a {
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+#div_l #div_left_bottom a .icon-upgrade-button-bg {
+  fill: rgba(255, 255, 255, 0.54);
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  float: left;
+  display: block;
+}
+#div_l #div_left_bottom a #bot_div {
+  float: left;
+  display: block;
+}
+#div_l #div_left_bottom a .icon-chevron-right {
+  fill: rgba(255, 255, 255, 0.3);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  vertical-align: middle;
+  float: right;
+  display: block;
+}
+#div_l #div_left_bottom #bot_div_yc {
+  display: none;
+}
+#div_l #div_left_bottom #bot_div {
+  float: left;
+  display: block;
+}
+#div_z {
+  background-color: #fff;
+  overflow: hidden;
+  float: left;
+  display: block;
+}
+#div_z header {
+  padding: 24px 24px 20px 28px;
+  line-height: 24px;
+  overflow: hidden;
+}
+#div_z header #div_01 {
+  opacity: 1;
+  background: #fff;
+  float: left;
+  display: block;
+}
+#div_z header #div_01 .icon-normal-list {
+  width: 24px;
+  height: 24px;
+  fill: rgba(0, 0, 0, 0.36);
+  display: none;
+  margin: 0px 12px;
+}
+#div_z header #div_02 {
+  overflow: hidden;
+  float: left;
+  display: block;
+}
+#div_z header #div_02 h5 {
+  font-size: 22px;
+  font-weight: 400;
+  float: left;
+  display: block;
+  width: -5000%;
+}
+#div_z header #div_03 {
+  width: -5000%;
+  float: right;
+  display: block;
+}
+#div_z header #div_03 #div_r {
+  float: right;
+  display: block;
+  width: 35px;
+  overflow: hidden;
+}
+#div_z header #div_03 #div_r a {
+  overflow: hidden;
+  float: right;
+  display: block;
+}
+#div_z header #div_03 #div_r .icon-sort-by-duedate {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  float: right;
+  display: block;
+}
+#div_z header #div_03 .icon-more-for-folder {
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  float: right;
+  display: block;
+}
+#div_z #add_list {
+  overflow: hidden;
+  background: url(../img/219049-12100614560222.jpg) no-repeat;
+}
+#div_z #add_list #div_shuru {
+  height: 40px;
+  padding-left: 0px;
+  margin-right: 15px;
+  overflow: hidden;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 615px;
+  margin-left: 24px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#div_z #add_list #txt {
+  width: 690px;
+  font-size: 14px;
+  line-height: 40px;
+  overflow: hidden;
+  background-color: skyblue;
+  resize: none;
+  border: 0;
+  outline: 0;
+}
+#div_z #list_body {
+  overflow: hidden;
+  background-size: cover;
+}
+#div_z #list_body #div_list {
+  opacity: 1;
+}
+#div_z #list_body #div_list section {
+  border: 1px solid skyblue;
+}
+#div_z #list_body #div_list .div_z_xiaobiaoti {
+  height: 36px;
+  line-height: 36px;
+  padding: 0px 28px 0px 26px;
+}
+#div_z #list_body #div_list .div_z_xiaobiaoti .xia {
+  border-style: solid dashed dashed dashed;
+  border-color: #ccc transparent transparent transparent;
+  border-width: 6px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  line-height: 36px;
+  float: left;
+  display: block;
+  margin-top: 15px;
+  margin-right: 8.9px;
+}
+#div_z #list_body #div_list ul li:hover {
+  background-color: rgba(204, 204, 204, 0.54);
+  der-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+#div_z #list_body #div_list ul li:hover .icon-normal-list {
+  display: block;
+}
+#div_z #list_body #div_list ul li:hover .icon-more-for-folder {
+  display: block;
+}
+#div_z #list_body #div_list ul li {
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px 20px;
+}
+#div_z #list_body #div_list ul li div {
+  float: left;
+  display: block;
+  overflow: hidden;
+}
+#div_z #list_body #div_list ul li .icon-normal-list {
+  fill: rgba(26, 26, 26, 0.54);
+  width: 24px;
+  height: 24px;
+  float: left;
+  display: block;
+  margin-top: 8px;
+  display: none;
+}
+#div_z #list_body #div_list ul li .icon-more-for-folder {
+  fill: rgba(26, 26, 26, 0.54);
+  width: 24px;
+  height: 24px;
+  float: right;
+  display: block;
+  margin-top: 8px;
+  display: none;
+}
+#div_z #list_body #div_list ul li .i-tny {
+  fill: rgba(26, 26, 26, 0.54);
+  display: inline;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+  display: block;
+  margin-top: 12px;
+  margin-right: 5px;
+}
+#div_z #list_body #div_list ul li .div_you {
+  overflow: hidden;
+  float: right;
+  display: block;
+}
+#div_z #list_body #div_list ul li .div_you span {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.36);
+  position: relative;
+}
+#div_z #list_body #div_list ul .gang {
+  background-color: rgba(153, 153, 153, 0.12);
+  height: 1px;
+  margin: 0px 20px;
+}
+#div_right {
+  overflow: hidden;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  background: #999;
+  line-height: 100vh;
+  text-align: center;
+}
+#div_right span {
+  text-align: center;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.24);
+}
